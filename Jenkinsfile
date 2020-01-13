@@ -13,7 +13,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             withAWS(credentials: 'jenkins', region: 'us-east-2')
             s3Upload(bucket: 'jenkin-udacity-project', pathStyleAccessEnabled: true, payloadSigningEnabled: true, file: 'index.html')
